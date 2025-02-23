@@ -87,4 +87,3 @@ Frontend: http://localhost:4200
 📀 Database Setup (PostgreSQL)
 1-Ensure PostgreSQL is running and create a database:
 CREATE DATABASE movie_db;
-💡 Built with ❤️ using Angular, Spring Boot, and PostgreSQL!
