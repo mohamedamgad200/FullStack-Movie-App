@@ -1,4 +1,4 @@
-![userdashboardsearchpage](https://github.com/user-attachments/assets/82ee6a8c-40ef-42b4-9ac1-d7c27864f5e9)# 🎬 Movie Management Application
+# 🎬 Movie Management Application
 
 This **Full-Stack Movie Management Application** allows **admin users** to manage movies from the **OMDB API** and **regular users** to view, search, and rate movies.
 
