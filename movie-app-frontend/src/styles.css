@@ -1,0 +1,13 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  .success-snackbar {
+    @apply bg-green-500 text-white;
+  }
+
+  .error-snackbar {
+    @apply bg-red-500 text-white;
+  }
+}

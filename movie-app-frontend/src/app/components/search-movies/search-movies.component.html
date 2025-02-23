@@ -1,0 +1,21 @@
+<app-header></app-header>
+<div class="flex h-screen">
+    <app-side-bar-user></app-side-bar-user>
+    <div class="flex-1 p-8 bg-gray-100 overflow-auto">
+        <div class="mb-6 flex items-center gap-4">
+            <input type="text" [(ngModel)]="searchQuery" placeholder="Search for movies..."
+                class="w-full p-3 border rounded-lg shadow-sm" />
+            <button (click)="searchMovies()"
+                class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg">
+                🔍 Search
+            </button>
+        </div>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <app-moviecard *ngFor="let movie of movies" [movie]="movie">
+            </app-moviecard>
+        </div>
+        <div *ngIf="movies?.length === 0 && searchPerformed" class="text-center text-red-500 mt-4">
+            No movies found. Try a different search.
+        </div>
+    </div>
+</div>

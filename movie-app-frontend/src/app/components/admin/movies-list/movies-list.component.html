@@ -1,0 +1,25 @@
+<app-header></app-header>
+<div class="flex h-screen">
+    <app-side-bar></app-side-bar>
+    <div class="flex-1 p-8 bg-gray-100 overflow-auto">
+        <div class="flex justify-end mb-4">
+            <button mat-raised-button color="warn" (click)="deleteSelectedMovies()"
+                [disabled]="selectedMovieIds.length === 0">
+                Delete Selected Movies
+            </button>
+        </div>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 m-3">
+            <app-manage-movie-card *ngFor="let movie of movies" [movie]="movie"
+                (selectionChange)="onSelectionChange($event)">
+            </app-manage-movie-card>
+        </div>
+        <div *ngIf="movies?.length === 0" class="text-center text-red-500 mt-4">
+            No movies found.Add Movies.
+        </div>
+        <div class="mt-8 flex justify-center">
+            <mat-paginator [length]="totalElements" [pageSize]="pageSize" [pageSizeOptions]="[5, 10, 20]"
+                showFirstLastButtons (page)="onPageChange($event)">
+            </mat-paginator>
+        </div>
+    </div>
+</div>

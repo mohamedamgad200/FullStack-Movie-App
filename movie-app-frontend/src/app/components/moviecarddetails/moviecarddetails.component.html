@@ -1,0 +1,26 @@
+<app-header></app-header>
+<div class="min-h-screen bg-gray-900 text-white flex justify-center items-center p-6">
+    <div class="bg-white text-black rounded-lg shadow-2xl w-full max-w-4xl p-8">
+        <h2 class="text-3xl font-extrabold mb-6 text-center">{{ movie.title }}</h2>
+
+        <div class="flex flex-col md:flex-row items-center gap-6">
+            <img [src]="movie.poster" alt="{{ movie.title }}"
+                class="w-full md:w-1/2 h-80 object-cover rounded-lg shadow-lg">
+            <div class="flex flex-col justify-between">
+                <p><strong>🎬 Genre:</strong> {{ movie.genre }}</p>
+                <p><strong>📅 Year:</strong> {{ movie.year }}</p>
+                <p><strong>🎥 Director:</strong> {{ movie.director }}</p>
+                <p class="mt-4">{{ movie.description }}</p>
+
+                <div class="mt-6">
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg mr-2"
+                        (click)="openRateDialog()">Rate Movie</button>
+                    <button class="bg-blue-500 hover:bg-blue-600 text-white font-bold py-2 px-4 rounded-lg"
+                        (click)="goToHome()">
+                        ⬅️ Back to Home
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
